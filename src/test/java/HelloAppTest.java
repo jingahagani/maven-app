@@ -1,14 +1,10 @@
 import org.junit.jupiter.api.Test;
- 
 import static org.junit.jupiter.api.Assertions.assertEquals;
- 
+
 public class HelloAppTest {
- 
+
     @Test
-    public void testMessage() {
-        assertEquals(
-            "Hello from my Maven application!",
-            HelloApp.getMessage()
-        );
+    public void testAdd() {
+        assertEquals(5, HelloApp.add(2, 3));
     }
 }
