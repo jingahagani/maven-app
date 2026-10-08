@@ -7,10 +7,22 @@ pipeline {
     }
 
     stages {
-        stage('Build and Test') {
+
+        stage('Build') {
             steps {
-                sh 'java -version'
-                sh 'mvn clean package'
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                sh 'mvn package'
             }
         }
     }
