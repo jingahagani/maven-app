@@ -7,7 +7,6 @@ pipeline {
     }
 
     stages {
-
         stage('Build') {
             steps {
                 sh 'mvn clean compile'
@@ -24,6 +23,12 @@ pipeline {
             steps {
                 sh 'mvn package'
             }
+        }
+    }
+
+    post {
+        success {
+            archiveArtifacts artifacts: 'target/*.jar'
         }
     }
 }
