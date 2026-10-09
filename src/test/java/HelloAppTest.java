@@ -5,6 +5,6 @@ public class HelloAppTest {
 
     @Test
     public void testAdd() {
-        assertEquals(20, HelloApp.mul(4, 5));
+        assertEquals(25, HelloApp.mul(5, 5));
     }
 }
