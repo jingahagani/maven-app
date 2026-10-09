@@ -24,6 +24,12 @@ pipeline {
                 sh 'mvn package'
             }
         }
+
+        stage('Deploy') {
+            steps {
+                sh 'java -jar target/maven-app-1.0.jar'
+            }
+        }
     }
 
     post {
