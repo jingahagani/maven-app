@@ -38,5 +38,3 @@ pipeline {
         }
     }
 }
-
-// Testing GitHub webhook
